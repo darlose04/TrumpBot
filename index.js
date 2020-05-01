@@ -29,7 +29,7 @@ client.on("message", (msg) => {
       .catch((err) => console.log(err));
   };
 
-  if (msg.content[0] === "#") {
+  if (msg.content[0] === "?") {
     getQuote();
   }
 });
