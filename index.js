@@ -12,7 +12,7 @@ client.on("message", (msg) => {
   //   msg.reply("pong");
   // }
 
-  const getJoke = async () => {
+  const getQuote = async () => {
     const url = "https://api.tronalddump.io/random/quote";
 
     fetch(url, {
@@ -23,14 +23,14 @@ client.on("message", (msg) => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.joke);
-        msg.reply(data.joke);
+        console.log(data.value);
+        msg.reply(data.value);
       })
       .catch((err) => console.log(err));
   };
 
   if (msg.content[0] === "#") {
-    getJoke();
+    getQuote();
   }
 });
 
